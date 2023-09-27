@@ -6,8 +6,8 @@
       <class name="org.ictak.scripts.TestClass">
         <methods>
           <include name="setUp"/>
-          <include name="VerifyAdminUpdate"/>
-          <include name="afTest"/>
+          <include name="afMethod"/>
+          <include name="VerifyAdminLoginEmptyData"/>
         </methods>
       </class> <!-- org.ictak.scripts.TestClass -->
     </classes>

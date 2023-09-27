@@ -13,7 +13,7 @@ public class TestClass extends TestBase
 	
 	LoginPage log;
 	
-/*@Test(description = "TestCase 1")
+@Test(description = "TestCase 1")
 public void VerifyAdminLogin() throws IOException, InterruptedException
 {
 	
@@ -60,8 +60,8 @@ public void VerifyAdminLoginInvalidPasswd() throws IOException, InterruptedExcep
 public void VerifyTrainerLogin() throws IOException, InterruptedException 
 {
 	log=new LoginPage(driver);	
-	String username=Excelutility.getData(3, 0);
-	String password=Excelutility.getData(3, 1);
+	String username=Excelutility.getData(5, 0);
+	String password=Excelutility.getData(5, 1);
 	log.Username(username);
 	Thread.sleep(5000);	
 	log.Passwd(password);
@@ -75,8 +75,8 @@ public void VerifyTrainerLogin() throws IOException, InterruptedException
 public void VerifyLogoCheck() throws IOException, InterruptedException 
 {
 	log=new LoginPage(driver);	
-	String username=Excelutility.getData(3, 0);
-	String password=Excelutility.getData(3, 1);
+	String username=Excelutility.getData(5, 0);
+	String password=Excelutility.getData(5, 1);
 	log.Username(username);
 	Thread.sleep(5000);	
 	log.Passwd(password);
@@ -92,8 +92,8 @@ public void VerifyLogoCheck() throws IOException, InterruptedException
 public void VerifyAddBtnCheck() throws IOException, InterruptedException 
 {
 	log=new LoginPage(driver);	
-	String username=Excelutility.getData(3, 0);
-	String password=Excelutility.getData(3, 1);
+	String username=Excelutility.getData(5, 0);
+	String password=Excelutility.getData(5, 1);
 	log.Username(username);
 	Thread.sleep(5000);	
 	log.Passwd(password);
@@ -112,8 +112,8 @@ public void VerifyAddBtnCheck() throws IOException, InterruptedException
 public void VerifyPofficerLogin() throws IOException, InterruptedException 
 {
 	log=new LoginPage(driver);	
-	String username=Excelutility.getData(4, 0);
-	String password=Excelutility.getData(4, 1);
+	String username=Excelutility.getData(6, 0);
+	String password=Excelutility.getData(6, 1);
 	log.Username(username);
 	Thread.sleep(5000);	
 	log.Passwd(password);
@@ -127,8 +127,8 @@ public void VerifyPofficerLogin() throws IOException, InterruptedException
 public void VerifyPofficerUpdBtn() throws IOException, InterruptedException 
 {
 	log=new LoginPage(driver);	
-	String username=Excelutility.getData(4, 0);
-	String password=Excelutility.getData(4, 1);
+	String username=Excelutility.getData(6, 0);
+	String password=Excelutility.getData(6, 1);
 	log.Username(username);
 	Thread.sleep(5000);	
 	log.Passwd(password);
@@ -144,8 +144,8 @@ public void VerifyPofficerUpdBtn() throws IOException, InterruptedException
 public void VerifyPofficerSelctDrpDwn() throws IOException, InterruptedException 
 {
 	log=new LoginPage(driver);	
-	String username=Excelutility.getData(4, 0);
-	String password=Excelutility.getData(4, 1);
+	String username=Excelutility.getData(6, 0);
+	String password=Excelutility.getData(6, 1);
 	log.Username(username);
 	Thread.sleep(5000);	
 	log.Passwd(password);
@@ -284,7 +284,7 @@ public void VerifyLearnerCourse() throws IOException, InterruptedException
 	Assert.assertEquals(trnUrl,Constants.expAUrl);
 }
 
-@Test(description = "TestCase 15")
+@Test(description = "TestCase 16")
 
 public void VerifyLearnerProject() throws IOException, InterruptedException 
 {
@@ -310,7 +310,7 @@ public void VerifyLearnerProject() throws IOException, InterruptedException
 	String trnUrl=log.Url();
 	Assert.assertEquals(trnUrl,Constants.expAUrl);
 }
-@Test(description = "TestCase 16")
+@Test(description = "TestCase 17")
 
 public void VerifyLearnerBatch() throws IOException, InterruptedException 
 {
@@ -338,7 +338,7 @@ public void VerifyLearnerBatch() throws IOException, InterruptedException
 	String trnUrl=log.Url();
 	Assert.assertEquals(trnUrl,Constants.expAUrl);
 }
-@Test(description = "TestCase 16")
+@Test(description = "TestCase 18")
 
 public void VerifyLearnerCstatus() throws IOException, InterruptedException 
 {
@@ -368,9 +368,9 @@ public void VerifyLearnerCstatus() throws IOException, InterruptedException
 	String trnUrl=log.Url();
 	Assert.assertEquals(trnUrl,Constants.expAUrl);
 }
-	@Test(description = "TestCase 16")
+	@Test(description = "TestCase 19")
 
-	public void VerifyLearnerCstatus() throws IOException, InterruptedException 
+	public void VerifyLearnerSubmit() throws IOException, InterruptedException 
 	{
 		log=new LoginPage(driver);	
 		String username=Excelutility.getData(5, 0);
@@ -401,7 +401,7 @@ public void VerifyLearnerCstatus() throws IOException, InterruptedException
 		Assert.assertEquals(trnUrl,Constants.exptUrl);	
 }
 	
-	@Test(description = "TestCase 17")
+	@Test(description = "TestCase 20")
 
 	public void VerifyBackToDshb() throws IOException, InterruptedException 
 	{
@@ -422,7 +422,7 @@ public void VerifyLearnerCstatus() throws IOException, InterruptedException
 		
 }
 
-	@Test(description = "TestCase 17")
+	@Test(description = "TestCase 21")
 
 	public void VerifyUploadFile() throws IOException, InterruptedException 
 	{
@@ -441,7 +441,7 @@ public void VerifyLearnerCstatus() throws IOException, InterruptedException
 	
 //Admin	Access//
 	
-	@Test(description = "TestCase 18")
+	@Test(description = "TestCase 22")
 	public void VerifyAdminAddnew() throws IOException, InterruptedException
 	{
 		
@@ -459,7 +459,7 @@ public void VerifyLearnerCstatus() throws IOException, InterruptedException
 	}
 	
 
-	@Test(description = "TestCase 18")
+	@Test(description = "TestCase 23")
 	public void VerifyAdminAddName() throws IOException, InterruptedException
 	{
 		
@@ -478,7 +478,7 @@ public void VerifyLearnerCstatus() throws IOException, InterruptedException
 
 	}
 	
-	@Test(description = "TestCase 19")
+	@Test(description = "TestCase 24")
 	public void VerifyAdminAddEmail() throws IOException, InterruptedException
 	{
 		
@@ -497,7 +497,7 @@ public void VerifyLearnerCstatus() throws IOException, InterruptedException
 
 	}
 	
-	@Test(description = "TestCase 19")
+	@Test(description = "TestCase 25")
 	public void VerifyAdminAddUser() throws IOException, InterruptedException
 	{
 		
@@ -515,7 +515,7 @@ public void VerifyLearnerCstatus() throws IOException, InterruptedException
 	Assert.assertEquals(admurl,Constants.expAAUrl);
 	}
 	
-	@Test(description = "TestCase 20")
+	@Test(description = "TestCase 26")
 	public void VerifyAdminAddPasswd() throws IOException, InterruptedException
 	{
 		
@@ -534,7 +534,7 @@ public void VerifyLearnerCstatus() throws IOException, InterruptedException
 	}
 	
 	
-	@Test(description = "TestCase 21")
+	@Test(description = "TestCase 27")
 	public void VerifyAdminAddRole() throws IOException, InterruptedException
 	{
 		
@@ -552,7 +552,7 @@ public void VerifyLearnerCstatus() throws IOException, InterruptedException
 	Assert.assertEquals(admurl,Constants.expAAUrl);
 	}
 	
-	@Test(description = "TestCase 21")
+	@Test(description = "TestCase 28")
 	public void VerifyAdminSubmit() throws IOException, InterruptedException
 	{
 		
@@ -577,12 +577,13 @@ public void VerifyLearnerCstatus() throws IOException, InterruptedException
 	Thread.sleep(5000);
 	log.Submit();
 	Thread.sleep(5000);
+	System.out.println("Posted Successfully");
 	String admurl=log.Url();
 	Assert.assertEquals(admurl,Constants.expaUrl);
-	}*/
+	}
 	
 
-	@Test(description = "TestCase 22")
+	@Test(description = "TestCase 29")
 	public void VerifyAdminUpdate() throws IOException, InterruptedException
 	{
 		
@@ -593,13 +594,14 @@ public void VerifyLearnerCstatus() throws IOException, InterruptedException
 	log.Passwd(password);
 	log.Login();
 	Thread.sleep(5000);
-	log.Updatebtn();	
+	log.Updatebtn();
+	System.out.println("Updated Successfully");
 	Thread.sleep(2000);
 	String admurl=log.Url();
 	Assert.assertEquals(admurl,Constants.expaUrl);
 	}
 	
-	@Test(description = "TestCase 23")
+	@Test(description = "TestCase 30")
 	public void VerifyAdminDelete() throws IOException, InterruptedException
 	{
 		
@@ -612,7 +614,42 @@ public void VerifyLearnerCstatus() throws IOException, InterruptedException
 	Thread.sleep(5000);
 	log.Deletebtn();	
 	Thread.sleep(2000);
+	System.out.println("Deleted Successfully");
 	String admurl=log.Url();
 	Assert.assertEquals(admurl,Constants.expaUrl);
+	}
+	
+	@Test(description = "TestCase 31")
+	public void VerifyAdminToLearners() throws IOException, InterruptedException
+	{
+		
+	log=new LoginPage(driver);	
+	String username=Excelutility.getData(0, 0);
+	String password=Excelutility.getData(0, 1);
+	log.Username(username);
+	log.Passwd(password);
+	log.Login();
+	Thread.sleep(5000);
+	log.Learnersbtn();	
+	Thread.sleep(2000);
+	String admurl=log.Url();
+	Assert.assertEquals(admurl,Constants.exptUrl);
+	}
+	
+	@Test(description = "TestCase 32")
+	public void VerifyAdminToPlacement() throws IOException, InterruptedException
+	{
+		
+	log=new LoginPage(driver);	
+	String username=Excelutility.getData(0, 0);
+	String password=Excelutility.getData(0, 1);
+	log.Username(username);
+	log.Passwd(password);
+	log.Login();
+	Thread.sleep(5000);
+	log.Placementbtn();	
+	Thread.sleep(2000);
+	String admurl=log.Url();
+	Assert.assertEquals(admurl,Constants.expPoUrl);
 	}
 }

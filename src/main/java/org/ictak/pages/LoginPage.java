@@ -12,7 +12,7 @@ WebDriver driver;
 private WebElement ausername,tusername,backToDshb,name,email,uname,addpswd,addRoleDrpDwn,updBtn,deletBtn;
 private WebElement apassword,tpassword,courseDrpDwn,projectDrpDwn,batchDrpDwn,courseStDrpDwn,submitbtn;
 private WebElement alogin,tlogin,logo,addbtn,updtBtn,testDrpDwn,submbtn,logobtn,learnId,UpldFile;
-
+private WebElement LearnersBtn,placementBtn;
 public LoginPage(WebDriver driver)
 {
 	this.driver=driver;
@@ -174,6 +174,7 @@ public void UploadFile()
 
 //Admin Access//
 
+// a. User Dashboard//
 
 public void addName()
 {
@@ -221,5 +222,20 @@ public void Deletebtn()
 {
 	deletBtn=driver.findElement(By.xpath("//button[@class='btn btn-danger btn btn-primary']"));
 	deletBtn.click();
+}
+
+
+//b. Learner Dashboard//
+
+public void Learnersbtn()
+{
+	LearnersBtn=driver.findElement(By.xpath("//span[@class='item-content' and text()='Learners']"));
+	LearnersBtn.click();
+}
+
+public void Placementbtn()
+{
+	placementBtn=driver.findElement(By.xpath("//span[@class='item-content' and text()='Placement']"));
+	placementBtn.click();
 }
 }
