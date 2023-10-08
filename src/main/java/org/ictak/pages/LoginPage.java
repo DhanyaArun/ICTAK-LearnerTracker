@@ -52,8 +52,51 @@ public String Url()
 	
 }
 
+public String AdminPageCheck()
+{	
+	WebElement admin=driver.findElement(By.id("basic-nav-dropdown"));
+	String adminText=admin.getText();
+	System.out.println(adminText);
+	return adminText;
+	
+}
+
+public String EmptyLoginCheck()
+{	
+	WebElement admin=driver.findElement(By.xpath("//div[@role='alert' and @class='fade alert alert-danger alert-dismissible show' and text()='User not found !!']"));
+	String notloginText=admin.getText();
+	System.out.println(notloginText);
+	return notloginText;
+	
+}
+
+public String InvCheck()
+{	
+	WebElement admin=driver.findElement(By.xpath("//div[@role='alert' and contains(@class, 'alert-danger') and text()='Login Failed!!']"));
+	String adminInvText=admin.getText();
+	System.out.println(adminInvText);
+	return adminInvText;
+	
+}
 
 
+public String TrainerPageCheck()
+{	
+	WebElement trainer=driver.findElement(By.id("basic-nav-dropdown"));
+	String trainerText=trainer.getText();
+	System.out.println(trainerText);
+	return trainerText;
+	
+}
+
+public String PofficerPageCheck()
+{	
+	WebElement pofficer=driver.findElement(By.id("basic-nav-dropdown"));
+	String pofficerText=pofficer.getText();
+	System.out.println(pofficerText);
+	return pofficerText;
+	
+}
 //Learner Dashboard//
 
 
@@ -67,13 +110,29 @@ public void LogoCheck()
 }
 public void addButtonCheck()
 {
-addbtn=driver.findElement(By.xpath("//button[@class=\"mb-3 btn btn-success\"]"));
-addbtn.click();
+	addbtn=driver.findElement(By.xpath("//button[@class=\"mb-3 btn btn-success\"]"));
+	addbtn.click();
 }
+
+public String addButtonAssert()
+{
+	WebElement addtext=driver.findElement(By.xpath("//h3[text()='Add Users']"));
+	String AddText=addtext.getText();
+	return AddText;
+}
+
+
 public void updBtnClick()
 {
-	updtBtn=driver.findElement(By.xpath("//button[@type=\"button\"and@class=\"btn btn-success btn btn-primary\"]"));
+	updtBtn=driver.findElement(By.xpath("//button[@type=\"button\"and@class=\"btn btn-success btn btn-primary\"])"));
 	updtBtn.click();
+}
+
+public String updateButtonAssert()
+{
+	WebElement updtext=driver.findElement(By.xpath("//label[@class='form-label' and text()='Placement Status:']"));
+	String UpdText=updtext.getText();
+	return UpdText;
 }
 
 public void PlcmtStatsDropdwnCheck() 
@@ -87,7 +146,7 @@ public void PlcmtStatsDropdwnCheck()
 
 public void PlcmtStatsButn() 
 {
-	submbtn=driver.findElement(By.xpath("//button[@class=\"btn btn-success\"]"));
+	submbtn=driver.findElement(By.xpath("//button[@class='btn btn-success' and text()='Submit']"));
 	submbtn.click();
 	//System.out.println("Updated Successfully");
 	
@@ -103,7 +162,7 @@ public void LogoButn()
 
 
 
-//Learner Form Details//
+//Learner Form Details(Add new user)//
 
 
 
@@ -163,6 +222,15 @@ public void BackToDashboardBtn()
 	backToDshb.click();
 }
 
+public String BackToDshbrdPageCheck()
+{	
+	WebElement LearnerText=driver.findElement(By.xpath("//a[@class='navbar-brand' and text()='LearnerTracker']"));
+	String BackText=LearnerText.getText();
+	System.out.println(BackText);
+	return BackText;
+	
+}
+
 public void UploadFile()
 {
 	UpldFile=driver.findElement(By.xpath("//button[@type='button' and contains(@class, 'btn-success')]/ion-icon[@name='cloud-upload']\r\n"
@@ -171,31 +239,60 @@ public void UploadFile()
 
 }
 
+public void ChooseFile()
+{
+	WebElement chooseFile=driver.findElement(By.name("file"));	
+	chooseFile.sendKeys("C:\\Users\\Arun\\Documents\\Learner data.csv");
+
+}
+
+public void SubmitFile()
+{
+	WebElement submtFile=driver.findElement(By.xpath("//button[@class='ui grey mini button' and text()='Submit']"));	
+	submtFile.click();
+}
+
+public void RetndshbrdFile()
+{
+	WebElement retFile=driver.findElement(By.xpath("//button[@class='swal2-confirm swal2-styled' and text()='Return to Dashboard']"));	
+	retFile.click();
+}
+
+public String FileCheck()
+{
+	WebElement FileText=driver.findElement(By.id("swal2-title"));	
+	String filetext=FileText.getText();
+	return filetext;
+
+}
+
+//swal2-title
 
 //Admin Access//
 
 // a. User Dashboard//
 
-public void addName()
+public void addName(String Name)
 {
 	name=driver.findElement(By.name("name"));
-	name.sendKeys("Meera");
+	name.sendKeys(Name);
+	
 }
-public void addEmail()
+public void addEmail(String Email)
 {
 	email=driver.findElement(By.name("email"));
-	email.sendKeys("Meera123@gmail.com");
+	email.sendKeys(Email);
 }
-public void addUser()
+public void addUser(String user)
 {
 	uname=driver.findElement(By.name("username"));
-	uname.sendKeys("Trainer123");
+	uname.sendKeys(user);
 }
 
-public void addPasswd()
+public void addPasswd(String passwd)
 {
 	addpswd=driver.findElement(By.name("password"));
-	addpswd.sendKeys("trainer@234");
+	addpswd.sendKeys(passwd);
 }
 
 public void addRoleDropdwnCheck() 
@@ -208,16 +305,78 @@ public void addRoleDropdwnCheck()
 }
 public void Submit()
 {
-	submitbtn=driver.findElement(By.xpath("//button[text()='Submit']"));
+	submitbtn=driver.findElement(By.xpath("//button[@class='btn btn-success' and text()='Submit']"));
 	submitbtn.click();
 	
 }
+
+public String NameEmptyCheck()
+{
+	WebElement submText=driver.findElement(By.xpath("//p[@class='fw-light fst-italic text-start text-danger' and text()='Must contain letters only']"));
+	String subtext=submText.getText(); 
+	return subtext;
+	
+}
+
+
+public String SubmitCheck()
+{
+	WebElement submText=driver.findElement(By.id("swal2-html-container"));
+	String subtext=submText.getText(); 
+	return subtext;
+	
+}
+
+
+
+public void TrainerEditCheck()
+{
+	WebElement edit=driver.findElement(By.xpath("(//button[@class='btn btn-success'])[4]"));
+	edit.click();
+	
+}
+
+public void TrainerDeleteCheck()
+{
+	WebElement delete=driver.findElement(By.xpath("(//button[@class='btn btn-danger'])[4]"));
+	delete.click();
+	
+}
+
+//button[@class='btn btn-danger'])[4]
+	
+public String SubmitInvalidCheck()
+{
+	WebElement submText=driver.findElement(By.xpath("//p[@class='fw-light fst-italic text-start text-danger' and text()='Must contain letters,numbers and - only']"));
+	String subIntext=submText.getText(); 
+	return subIntext;
+	
+}
+
+
+
 public void Updatebtn()
 {
-	updBtn=driver.findElement(By.xpath("//button[@class='btn btn-success btn btn-primary']"));
+	updBtn=driver.findElement(By.xpath("(//button[@class='btn btn-success btn btn-primary'])[4]"));
 	updBtn.click();
 }
 
+
+public void UpdCheck()
+{
+	WebElement inputField = driver.findElement(By.id("name"));
+	String initialValue = inputField.getAttribute("Meera");
+	inputField.sendKeys("Dev");
+	String updatedValue = inputField.getAttribute("Meera");
+	/* if (!initialValue.equals(updatedValue)) {
+         System.out.println("The field has been updated.");
+     } else {
+         System.out.println("The field has not been updated.");
+     }*/
+
+
+	
+}
 public void Deletebtn()
 {
 	deletBtn=driver.findElement(By.xpath("//button[@class='btn btn-danger btn btn-primary']"));

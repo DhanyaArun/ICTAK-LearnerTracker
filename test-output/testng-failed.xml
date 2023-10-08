@@ -5,9 +5,18 @@
     <classes>
       <class name="org.ictak.scripts.TestClass">
         <methods>
+          <include name="VerifyAdminLoginInvalidPasswd"/>
+          <include name="VerifyAdminToPlacement"/>
           <include name="setUp"/>
+          <include name="VerifyPofficerUpdBtn"/>
+          <include name="VerifyAdminToLearners"/>
+          <include name="VerifyNameEmptySubmit"/>
+          <include name="VerifyAdminSubmit"/>
+          <include name="VerifyPofficerSelctDrpDwn"/>
+          <include name="VerifyAdminLogin"/>
+          <include name="VerifyAdminUpdate"/>
           <include name="afMethod"/>
-          <include name="VerifyAdminLoginEmptyData"/>
+          <include name="VerifyPofficerSubmtBtn"/>
         </methods>
       </class> <!-- org.ictak.scripts.TestClass -->
     </classes>
